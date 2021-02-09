@@ -41,17 +41,23 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div>
                         <h3>Palmas Improductivas</h3>
                     </div>
                     <canvas id="improductivas"></canvas>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div>
                         <h3>Palmas Productivas</h3>
                     </div>
                     <canvas id="productivas"></canvas>
+                </div>
+                <div class="col-lg-4">
+                    <div>
+                        <h3>Palmas Crater</h3>
+                    </div>
+                    <canvas id="crater"></canvas>
                 </div>
             </div>
         </div>
@@ -74,8 +80,8 @@
         labels: ['lote 14', 'lote 15', 'lote 16', 'lote 18', 'lote 13Q', 'lote 13s'],
         datasets: [{
             label: 'Improductivas',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(220,20,60)',
+            borderColor: 'rgb(220,20,60)',
             maxBarThickness: 30,
             data: [21, 15, 13, 8, 11, 7]
         }]
@@ -102,11 +108,35 @@
             data: [16266, 10358, 13917, 316, 5256, 4141]
         }]
     },
+    
 
     // Configuration options go here
     options: {}
 });
     </script>
+    <script>
+        var ctx = document.getElementById('crater').getContext('2d');
+   var chart = new Chart(ctx, {
+   // The type of chart we want to create
+   type: 'bar',
+
+   // The data for our dataset
+   data: {
+       labels: ['lote 14', 'lote 15', 'lote 16', 'lote 18', 'lote 13Q', 'lote 13s'],
+       datasets: [{
+           label: 'Crater',
+           backgroundColor: 'rgb(255,215,0)',
+           borderColor: 'rgb(255,215,0)',
+           maxBarThickness: 30,
+           data: [18782, 9981, 5084, 405, 6094, 4883]
+       }]
+   },
+   
+
+   // Configuration options go here
+   options: {}
+});
+   </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
